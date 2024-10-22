@@ -1,0 +1,22 @@
+/* CSS untuk menyesuaikan tampilan navigasi */
+.nav-link {
+    color: white !important; /* Teks menjadi putih */
+  }
+  
+  .nav-link.active {
+    color: #f0e68c !important; /* Warna link aktif bisa kamu sesuaikan, misalnya kuning pucat */
+  }
+  
+  /* semuanya */
+  * {
+    font-family: "Inter", sans-serif;
+  }
+  body{
+    background-color: #850000;
+  }
+
+  /* home */
+  .text-white {
+    color: white !important;
+  }
+  
