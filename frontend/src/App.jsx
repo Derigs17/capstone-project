@@ -11,6 +11,10 @@ import Magang from './page/Magang';
 import Persuratan from './page/Persuratan';
 import PenyerahanSkripsi from './page/PenyerahanSkripsi';
 
+import MagangUmum from './page/MagangUmum';
+import MagangKompetisi from './page/MagangKompetisi';
+
+
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 
@@ -41,6 +45,10 @@ function App() {
         <Route path="/magang" element={<Magang />} />
         <Route path="/persuratan" element={<Persuratan />} />
         <Route path="/penyerahan-skripsi" element={<PenyerahanSkripsi />} />
+
+        <Route path='/magang-umum' element={<MagangUmum />} />
+        <Route path='/magang-kompetisi' element={<MagangKompetisi />} />
+
 
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

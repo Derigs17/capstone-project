@@ -35,12 +35,12 @@ const Magang = () => {
             <Container className='mt-5 mb-5'>
                 <Row className="justify-content-center">
                     <Col sm={4} style={squareStyle}>
-                        <Link to="/tugas-akhir" style={squareStyle}>
+                        <Link to="/magang-umum" style={squareStyle}>
                             <h5 className="text-center text-white">Umum</h5>
                         </Link>
                     </Col>
                     <Col sm={4} style={squareStyle}>
-                        <Link to="/magang" style={squareStyle}>
+                        <Link to="/magang-kompetisi" style={squareStyle}>
                             <h5 className="text-center text-white">Kompetisi</h5>
                         </Link>
                     </Col>
@@ -49,12 +49,12 @@ const Magang = () => {
             <Container className='mt-5 mb-5'>
                 <Row className="justify-content-center">
                     <Col sm={4} style={squareStyle}>
-                        <Link to="/persuratan" style={squareStyle}>
+                        <Link to="/panduan-magang" style={squareStyle}>
                             <h5 className="text-center text-white">Panduan Magang</h5>
                         </Link>
                     </Col>
                     <Col sm={4} style={squareStyle}>
-                        <Link to="/penyerahan-skripsi" style={squareStyle}>
+                        <Link to="/alur-magang" style={squareStyle}>
                             <h5 className="text-center text-white">Alur Magang</h5>
                         </Link>
                     </Col>
