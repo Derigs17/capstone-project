@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Container, Row, Col, } from 'react-bootstrap';
 
 
@@ -26,21 +27,24 @@ const Home = () => {
         </Container>
       </div>
       <div>
-        <Container className='mt-5 mb-5'>
+  <Container className='mt-5 mb-5'>
+    <Row className="justify-content-center">
+      <Col sm={4} className='isi1 mt-4 pt-4 d-flex flex-column align-items-center' style={{ backgroundColor: '#F4CE74', padding: '10px', borderRadius: '5px', marginLeft: '20px', marginRight: '20px' }}>
+        <Link to="/Informatika" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <img src={laptop} alt="laptop" className="mb-4" style={{ width: '150px' }} />
+          <h5 className="text-center text-white">INFORMATIKA</h5>
+        </Link>
+      </Col>
 
-          <Row className="justify-content-center">
-            <Col sm={4} className='isi1 mt-4 pt-4 d-flex flex-column align-items-center' style={{ backgroundColor: '#F4CE74', padding: '10px', borderRadius: '5px',marginLeft: '20px', marginRight: '20px' }}>
-              <img src={laptop} alt="laptop" className="mb-4" style={{ width: '150px' }} />
-              <h5 className="text-center text-white">INFORMATIKA</h5>
-            </Col>
-
-            <Col sm={4} className='isi2 mt-4 pt-4 d-flex flex-column align-items-center' style={{ backgroundColor: '#F4CE74', padding: '10px', borderRadius: '5px', marginLeft: '20px', marginRight: '20px' }}>
-              <img src={tablet} alt="tablet" className="mb-4" style={{ width: '150px' }} />
-              <h5 className="text-center text-white">SISTEM INFORMASI</h5>
-            </Col>
-          </Row>
-        </Container >
-      </div>
+      <Col sm={4} className='isi2 mt-4 pt-4 d-flex flex-column align-items-center' style={{ backgroundColor: '#F4CE74', padding: '10px', borderRadius: '5px', marginLeft: '20px', marginRight: '20px' }}>
+        <Link to="/sistem-informasi" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <img src={tablet} alt="tablet" className="mb-4" style={{ width: '150px' }} />
+          <h5 className="text-center text-white">SISTEM INFORMASI</h5>
+        </Link>
+      </Col>
+    </Row>
+  </Container>
+</div>
     </>
   )
 }
