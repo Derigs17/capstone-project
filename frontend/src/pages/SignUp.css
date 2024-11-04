@@ -1,0 +1,104 @@
+/* src/SignUp.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #500;
+  }
+  
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #500;
+  }
+  
+  .signup-card {
+    background-color: #fff;
+    padding: 2rem;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .brand {
+    color: #8b0000;
+    font-weight: bold;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0 1.5rem;
+  }
+  
+  form label {
+    display: block;
+    text-align: left;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .input-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .signup-button {
+    background-color: #8b0000;
+    color: #fff;
+    padding: 0.8rem;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+  }
+  
+  .signup-button:hover {
+    background-color: #a40000;
+  }
+  
+  /* .signin-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .signin-link a {
+    color: #8b0000;
+    text-decoration: none;
+  }
+  
+  .signin-link a:hover {
+    text-decoration: underline;
+  }
+   */
+
+   .account-container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Center the content horizontally */
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .no-account {
+    margin-right: 10px; /* Adjust spacing between texts as needed */
+  }
+  
+  .magang-link {
+    color: #a40000; /* Customize the color of the link */
+    text-decoration: none; /* Remove underline if needed */
+  }

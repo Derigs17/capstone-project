@@ -1,76 +1,50 @@
-import { Container, Row, Col, Form, Button, } from 'react-bootstrap';
+// src/SignUp.jsx
+import React from 'react';
+import './SignUp.css'; // Import file CSS untuk styling
+import { Link } from 'react-router-dom';
 
-import googlelogo from '../images/googlelogo.png';
-
-const Login = () => {
+function SignUp() {
   return (
-    <Container className="login-container d-flex flex-column align-items-center justify-content-center mt-5">
-      <Row className="login-content align-items-center mb-5">
-        <Col className="login-form d-flex flex-column align-items-center justify-content-center"
-          style={{
-            borderRadius: '10px',
-            boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-            height: '550px',
-          }}>
-          
-          <h3 className="mb-4">Login in to your Account</h3>
+    <div className="signup-container">
+      <div className="signup-card">
+        {/* <h2>Welcome to <span className="brand">WEBSKOM</span></h2> */}
+        <h1>Sign up</h1>
 
-          <div className="d-flex justify-content-center mb-3">
-            <Button
-              variant="outline-danger"
-
-              className="mb-3 d-flex align-items-center google-login-button">
-              <img className='mx-2' style={{ height: '25px', width: '25px' }}
-                src={googlelogo} />
-              Login in with Google
-            </Button>
+        <form>
+          <label>
+            Enter your username or email address
+            <input type="text" placeholder="Username or email address" />
+          </label>
+          <div className="input-row">
+            <label>
+              User name
+              <input type="text" placeholder="User name" />
+            </label>
+            <label>
+              Contact Number
+              <input type="text" placeholder="Contact Number" />
+            </label>
           </div>
-          <div className="text-center">
-            <p>atau</p>
-          </div>
-          <Form action='' onSubmit={handleSubmit}>
-            <Form.Group className="text-start mb-3" controlId="formBasicEmail">
-              <Form.Control
-                type="email"
-                name="email"
-                placeholder="Alamat email"
-                onChange={handleInput} />
-              {errors.email && <span className='text-danger'>{errors.email}</span>}
-            </Form.Group>
-            <Form.Group className="text-start mb-3" controlId="formBasicPassword">
-              <Form.Control
-                type="password"
-                name="password"
-                placeholder="Password"
-                onChange={handleInput} />
-              {errors.password && <span className='text-danger'>{errors.password}</span>}
-            </Form.Group>
-            <p className="text-end mt-2" style={{ fontSize: '0.8rem' }}>
-              <a href="#" style={{ color: '#34745C' }}>Forgot Password?</a>
-            </p>
-            <Button
-              variant="secondary"
-              type="submit"
-              style={{
-                backgroundColor: '#34745C',
-                display: 'block',
-                margin: 'auto',
-                height: '35px',
-                width: '220px'
-              }}>
-              Login
-            </Button>
+          <label>
+            Enter your Password
+            <input type="password" placeholder="Password" />
+          </label>
 
+          <button type="submit" className="signup-button">Sign up</button>
+        </form>
 
-            <p className="mt-3 text-center mb-5">
-              Belumpunya Akun <a href="/Register" style={{ color: '#34745C' }}>Buat Akun</a>
-            </p>
+        {/* <div className="signin-link">
+          Have an Account? <a href="#">Sign in</a>
+        </div> */}
 
-          </Form>
-        </Col>
-      </Row>
-    </Container>
-  )
+        <div className="account-container">
+          <span className="no-account">Have an Account?</span>
+          <Link to="/register" className="magang-link">Sign In</Link>
+        </div>
+
+      </div>
+    </div>
+  );
 }
 
-export default Login
+export default SignUp;
