@@ -1,0 +1,135 @@
+/* src/SignIn.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #500;
+  }
+  
+  .signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #500;
+  }
+  
+  .signin-card {
+    background-color: #fff;
+    padding: 2rem;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .brand {
+    color: #8b0000;
+    font-weight: bold;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0 1.5rem;
+  }
+  
+  .google-signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #f0f0f0;
+    border: none;
+    color: #333;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+  
+  form label {
+    display: block;
+    text-align: left;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-footer {
+    text-align: right;
+    margin-top: 0.5rem;
+  }
+  
+  .form-footer a {
+    color: #8b0000;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  
+  .form-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .signin-button {
+    background-color: #8b0000;
+    color: #fff;
+    padding: 0.8rem;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+  }
+  
+  .signin-button:hover {
+    background-color: #a40000;
+  }
+
+  .account-container {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Center the content horizontally */
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .no-account {
+    margin-right: 10px; /* Adjust spacing between texts as needed */
+  }
+  
+  .magang-link {
+    color: #a40000; /* Customize the color of the link */
+    text-decoration: none; /* Remove underline if needed */
+  }
+  
+  
+  /* .signup-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .signup-link .textbaru {
+    color: #8b0000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+  } */
+  
+  /* .signup-link a:hover {
+    text-decoration: underline;
+  } */
+  
