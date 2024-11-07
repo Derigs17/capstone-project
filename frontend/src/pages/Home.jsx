@@ -45,6 +45,18 @@ const Home = () => {
     </Row>
   </Container>
 </div>
+<div>
+<Container className='mt-5 mb-5'>
+    <Row className="justify-content-center">
+      <Col sm={4} className='isi1 mt-4 pt-4 d-flex flex-column align-items-center' style={{ backgroundColor: '#F4CE74', padding: '10px', borderRadius: '5px', marginLeft: '20px', marginRight: '20px' }}>
+        <Link to="/Informatika" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <img src={laptop} alt="laptop" className="mb-4" style={{ width: '150px' }} />
+          <h5 className="text-center text-white">DATA DOSEN</h5>
+        </Link>
+      </Col>
+      </Row>
+      </Container>
+</div>
     </>
   )
 }
