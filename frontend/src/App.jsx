@@ -27,7 +27,7 @@ import NavbarComponent from './components/NavbarComponent'
 
 function App() {
 
-  const excludePaths = ['/login', '/register'];
+  const excludePaths = ['/Login', '/Register'];
 
   const location = useLocation();
 
@@ -58,8 +58,8 @@ function App() {
         <Route path='/magang-kompetisi' element={<MagangKompetisi />} />
 
 
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
       </Routes>
 
     </div>

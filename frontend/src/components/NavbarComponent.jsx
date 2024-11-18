@@ -19,7 +19,7 @@ const NavbarComponent = () => {
             </Nav>
             <div style={{ display: 'flex', gap: '10px' , marginRight: '30px' }}>
               <NavLink 
-                to="/login" 
+                to="/Login" 
                 className="nav-link" 
                 activeclassname="active" 
                 style={{ 
@@ -33,7 +33,7 @@ const NavbarComponent = () => {
                 Login
               </NavLink>
               <NavLink 
-                to="/register" 
+                to="/Register" 
                 className="nav-link" 
                 activeclassname="active" 
                 style={{ 
