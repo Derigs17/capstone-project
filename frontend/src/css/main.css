@@ -17,10 +17,40 @@
 
   /* home */
   .text-white {
-    color: white !important;
+    color: #D3D3D3 !important;
   }
+
+  .text-collor {
+    color: #333333 !important;
+  }
+
+  .bold-text {
+    font-weight: bold;
+  }
+  
   
   /* informatikia */
   .text-informatika{
     color: blue;
   }
+
+  /* media icon */
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Lebar lingkaran */
+    height: 40px; /* Tinggi lingkaran */
+    background-color: yellow; /* Warna background */
+    border-radius: 50%; /* Membuat lingkaran */
+    color: black; /* Warna ikon */
+    font-size: 18px; /* Ukuran ikon */
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efek hover */
+  }
+  
+  .social-icon:hover {
+    background-color: gold; /* Warna saat hover */
+    transform: scale(1.1); /* Efek zoom saat hover */
+  }
+  

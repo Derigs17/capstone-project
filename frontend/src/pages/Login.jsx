@@ -58,7 +58,7 @@ const Login = () => {
                             width: '80%', // Perubahan agar kolom menyesuaikan ruang
                         }}
                     >
-                        <h5 >Welcome to <span className="brand" style={{ color: '#620808' }}>WEBSKOM</span></h5>
+                        <h5 >Welcome to <span className="brand bold-text" style={{ color: '#5F9EA0' }}>WEBSKOM</span></h5>
                         <h2 className="mb-4">Sign In</h2>
                         <div className="d-flex justify-content-center mb-3">
                             <Button
@@ -98,7 +98,7 @@ const Login = () => {
                                 variant="secondary"
                                 type="submit"
                                 style={{
-                                    backgroundColor: '#620808',
+                                    backgroundColor: '#5F9EA0',
                                     display: 'block',
                                     margin: 'auto',
                                     height: '35px',

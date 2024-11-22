@@ -1,5 +1,9 @@
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import study from '../images/study.png';
+import kontak from '../images/kontak.png';
+import telpon from '../assets/telpon.png';
+import email from '../assets/email.png';
+import lokasi from '../assets/lokasi.png';
 
 const About = () => {
   return (
@@ -10,7 +14,7 @@ const About = () => {
           <Row className="justify-content-center align-items-center">
             <Col md={6} className='d-flex align-items-center '>
               <Container >
-                <h2 className="text-center text-white">ABOUT</h2>
+                <h2 className="text-center text-white bold-text">ABOUT</h2>
                 <p className="text-white" style={{ textAlign: 'justify' }}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel purus pharetra tortor mattis semper. Proin laoreet neque ut nibh hendrerit, a ultrices neque vulputate. Nunc ornare luctus sem vel ultrices. Ut facilisis nulla et efficitur posuere. Nunc pretium ornare feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel purus pharetra tortor mattis semper. Proin laoreet neque ut nibh hendrerit, a ultrices neque vulputate. Nunc ornare luctus sem vel ultrices. Ut facilisis nulla et efficitur posuere. Nunc pretium ornare feugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel purus pharetra tortor mattis semper. Proin laoreet neque ut nibh hendrerit, a ultrices neque vulputate. Nunc ornare luctus sem vel ultrices. Ut facilisis nulla et efficitur posuere. Nunc pretium ornare feugiat.
                 </p>
@@ -24,7 +28,7 @@ const About = () => {
       <div>
         <Container className='mb-5 text-white'>
           <Row className="justify-content-center">
-            <Col className='mt-4 pt-4 text-center'>
+            <Col className='mt-4 pt-4 text-center bold-text'>
               <h2>Company Profile Staff Tata Usaha</h2>
             </Col>
           </Row>
@@ -55,22 +59,98 @@ const About = () => {
 
       {/* Bagian Contact */}
       <div>
-        <Container>
-          <h2 className="text-center text-white">CONTACT</h2>
+        <Container className="mt-5 pt-5">
+          <h2 className="text-center text-white bold-text">CONTACT</h2>
         </Container>
-        <Container fluid className='mt-4 pt-4'>
+        <Container
+          fluid
+          className="mt-5 pt-2"
+          style={{
+            backgroundColor: 'white',
+            padding: '20px',
+            margin: '0 auto',
+            maxWidth: '1000px',
+            minHeight: '600px',
+            borderRadius: '8px',
+          }}
+        >
           <Row className="justify-content-center align-items-center">
-            <Col md={6} style={{ backgroundColor: 'pink' }} className="text-white p-4">
+            {/* Kolom dengan background foto */}
+            <Col
+              md={6}
+              style={{
+                backgroundImage: `url(${kontak})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                color: 'white',
+                minHeight: '700px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                padding: '20px',
+              }}
+            >
+              {/* Judul di bagian atas */}
               <h4>Informasi Kontak</h4>
-              <p><i className="fas fa-phone"></i> +62 8123 4567 8901</p>
-              <p><i className="fas fa-envelope"></i> layananfasilkom@gmail.com</p>
-              <p><i className="fas fa-map-marker-alt"></i> Gedung Fasilkom, Uniska</p>
+
+              {/* Konten tengah */}
+              <div>
+                <div className="d-flex  contact-info">
+                  <img
+                    src={telpon}
+                    alt="Phone Icon"
+                    style={{
+                      width: '20px',
+                      height: '20px',
+                      marginRight: '20px', // Jarak antara ikon dan teks
+                    }}
+                  />
+                  <p>+62 8123 4567 8901</p>
+                </div>
+
+                <div className="d-flex contact-info">
+                  <img
+                    src={email}
+                    alt="Email Icon"
+                    style={{
+                      width: '20px',
+                      height: '20px',
+                      marginRight: '20px',
+                    }}
+                  />
+                  <p>layananfasilkom@gmail.com</p>
+                </div>
+
+                <div className="d-flex  contact-info">
+                  <img
+                    src={lokasi}
+                    alt="Location Icon"
+                    style={{
+                      width: '20px',
+                      height: '20px',
+                      marginRight: '20px',
+                    }}
+                  />
+                  <p>Gedung Fasilkom, Uniska</p>
+                </div>
+              </div>
+
+              {/* Ikon Sosial Media di bagian bawah */}
               <div className="d-flex justify-content-start mt-3">
-                <i className="fab fa-facebook-f mx-2"></i>
-                <i className="fab fa-twitter mx-2"></i>
-                <i className="fab fa-instagram mx-2"></i>
+                <div className="social-icon">
+                  <i className="fab fa-facebook-f"></i>
+                </div>
+                <div className="social-icon mx-2">
+                  <i className="fab fa-twitter"></i>
+                </div>
+                <div className="social-icon">
+                  <i className="fab fa-instagram"></i>
+                </div>
               </div>
             </Col>
+
+            {/* Kolom dengan background putih */}
             <Col md={6} className="bg-white p-4">
               <Form>
                 <Row>
@@ -128,8 +208,10 @@ const About = () => {
             </Col>
           </Row>
         </Container>
-
       </div>
+
+
+
     </>
   )
 }
