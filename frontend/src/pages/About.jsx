@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
+
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import study from '../images/study.png';
 import kontak from '../images/kontak.png';
@@ -138,16 +142,17 @@ const About = () => {
 
               {/* Ikon Sosial Media di bagian bawah */}
               <div className="d-flex justify-content-start mt-3">
-                <div className="social-icon">
-                  <i className="fab fa-facebook-f"></i>
-                </div>
-                <div className="social-icon mx-2">
-                  <i className="fab fa-twitter"></i>
-                </div>
-                <div className="social-icon">
-                  <i className="fab fa-instagram"></i>
-                </div>
-              </div>
+  <div className="social-icon">
+    <FontAwesomeIcon icon={faFacebookF} />
+  </div>
+  <div className="social-icon mx-2">
+    <FontAwesomeIcon icon={faTwitter} />
+  </div>
+  <div className="social-icon">
+    <FontAwesomeIcon icon={faInstagram} />
+  </div>
+</div>
+
             </Col>
 
             {/* Kolom dengan background putih */}

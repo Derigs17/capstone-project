@@ -6,6 +6,7 @@ import Guidebook from "./pages/Guidebook";
 import About from "./pages/About";
 import Informatika from "./page/Informatika";
 import SistemInformasi from "./page/SistemInformasi";
+import Dosen from './pages/Dosen';
 
 import TugasAkhir from './page/TugasAkhir';
 import Magang from './page/Magang';
@@ -45,6 +46,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/informatika" element={<Informatika />} />
         <Route path="/sistem-informasi" element={<SistemInformasi />} />
+        <Route path="/dosen" element={<Dosen />} />
 
         <Route path="/tugas-akhir" element={<TugasAkhir />} />
         <Route path="/magang" element={<Magang />} />
