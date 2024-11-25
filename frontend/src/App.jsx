@@ -22,6 +22,7 @@ import PersuratanSI from './page/PersuratanSI';
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import UserProfile from './pages/UserProfile'
 
 import NavbarComponent from './components/NavbarComponent'
 
@@ -62,6 +63,7 @@ function App() {
 
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
+        <Route path="profile" element={<UserProfile />} />
       </Routes>
 
     </div>

@@ -85,7 +85,22 @@ app.post('/check-login', (req, res) => {
 });
 
 
+app.post('/updateUserProfile/:email', (req, res) => {
+    const userEmail = req.params.email;
+    const { name, email, password } = req.body;
 
+    const sqlUpdate = "UPDATE user SET name=?, email=?, password=? WHERE email=?";
+    
+    db.query(sqlUpdate, [name, email, password, userEmail], (updateErr, updateData) => {
+        if (updateErr) {
+            console.error("Error updating user profile:", updateErr);
+            return res.status(500).json({ error: "Internal Server Error" });
+        }
+
+        console.log("User profile updated successfully");
+        return res.json({ message: "User profile updated successfully" });
+    });
+});
 
 
 app.post('/logout', (req, res) => {
@@ -103,7 +118,33 @@ app.post('/logout', (req, res) => {
     });
 });
 
+app.get('/getUserData', (req, res) => {
+    const sql = "SELECT * FROM user";
+    db.query(sql, (err, data) => {
+        if (err) {
+            console.error("Error getting user data:", err);
+            return res.status(500).json({ error: "Internal Server Error" });
+        }
+        return res.json(data);
+    });
+});
 
+app.get('/getUserProfile/:email', (req, res) => {
+    const userEmail = req.params.email;
+    const sql = "SELECT * FROM user WHERE email = ?";
+    
+    db.query(sql, [userEmail], (err, data) => {
+        if (err) {
+            console.error("Error fetching user profile:", err);
+            return res.status(500).json({ error: "Internal Server Error" });
+        }
+        if (data.length > 0) {
+            return res.json(data[0]);
+        } else {
+            return res.status(404).json({ message: "User profile not found" });
+        }
+    });
+});
 
 
 

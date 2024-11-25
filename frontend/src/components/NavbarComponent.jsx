@@ -47,8 +47,8 @@ const NavbarComponent = () => {
                 Register
               </NavLink>
             </div>
-            <NavLink to="/profile" style={{ textDecoration: 'none' }}>
-              <Navbar.Brand className="logo-profile mt-2 mt-lg-0">
+            <NavLink className="" to="/profile" style={{ textDecoration: 'none' }}>
+              <Navbar.Brand className="logo-profile mt-lg-0">
                 <img src={logosementara} alt='logo' />
               </Navbar.Brand>
             </NavLink>
