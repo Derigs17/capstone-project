@@ -5,7 +5,7 @@ const Informatika = () => {
     const squareStyle = {
         width: '200px',          // Sesuaikan ukuran sesuai kebutuhan Anda
         height: '200px',
-        backgroundColor: '#F4CE74',
+        backgroundColor: '#F5F5DC',
         padding: '10px',
         borderRadius: '5px',
         margin: '20px',          // Tambahkan margin yang sama ke semua sisi
@@ -22,12 +22,12 @@ const Informatika = () => {
                 <Row className="justify-content-center">
                     <Col sm={4} style={squareStyle}>
                         <Link to="/tugas-akhir" style={squareStyle}>
-                            <h5 className="text-center text-white">Tugas Akhir</h5>
+                            <h5 className="text-center bold-text text-black">Tugas Akhir</h5>
                         </Link>
                     </Col>
                     <Col sm={4} style={squareStyle}>
                         <Link to="/magang" style={squareStyle}>
-                            <h5 className="text-center text-white">Magang</h5>
+                            <h5 className="text-center  bold-text text-black">Magang</h5>
                         </Link>
                     </Col>
                 </Row>
@@ -36,12 +36,12 @@ const Informatika = () => {
                 <Row className="justify-content-center">
                     <Col sm={4} style={squareStyle}>
                         <Link to="/persuratan" style={squareStyle}>
-                            <h5 className="text-center text-white">Persuratan</h5>
+                            <h5 className="text-center bold-text text-black">Persuratan</h5>
                         </Link>
                     </Col>
                     <Col sm={4} style={squareStyle}>
                         <Link to="/penyerahan-skripsi" style={squareStyle}>
-                            <h5 className="text-center text-white">Penyerahan Skripsi</h5>
+                            <h5 className="text-center bold-text text-black">Penyerahan Skripsi</h5>
                         </Link>
                     </Col>
                 </Row>

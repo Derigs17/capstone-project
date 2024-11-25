@@ -18,8 +18,8 @@ const About = () => {
           <Row className="justify-content-center align-items-center">
             <Col md={6} className='d-flex align-items-center '>
               <Container >
-                <h2 className="text-center text-white bold-text">ABOUT</h2>
-                <p className="text-white" style={{ textAlign: 'justify' }}>
+                <h2 className="text-center text-collor bold-text">ABOUT</h2>
+                <p className="text-collor" style={{ textAlign: 'justify' }}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel purus pharetra tortor mattis semper. Proin laoreet neque ut nibh hendrerit, a ultrices neque vulputate. Nunc ornare luctus sem vel ultrices. Ut facilisis nulla et efficitur posuere. Nunc pretium ornare feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel purus pharetra tortor mattis semper. Proin laoreet neque ut nibh hendrerit, a ultrices neque vulputate. Nunc ornare luctus sem vel ultrices. Ut facilisis nulla et efficitur posuere. Nunc pretium ornare feugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel purus pharetra tortor mattis semper. Proin laoreet neque ut nibh hendrerit, a ultrices neque vulputate. Nunc ornare luctus sem vel ultrices. Ut facilisis nulla et efficitur posuere. Nunc pretium ornare feugiat.
                 </p>
               </Container>
@@ -32,7 +32,7 @@ const About = () => {
       <div>
         <Container className='mb-5 text-white'>
           <Row className="justify-content-center">
-            <Col className='mt-4 pt-4 text-center bold-text'>
+            <Col className='mt-4 pt-4 text-center  text-collor bold-text'>
               <h2>Company Profile Staff Tata Usaha</h2>
             </Col>
           </Row>
@@ -40,22 +40,22 @@ const About = () => {
           <Row className="justify-content-center mt-5">
             <Col sm={4} className='d-flex flex-column align-items-center'>
               <img src={study} alt="rencana1" className="mb-4 img-fluid" style={{ width: '250px', height: '250px', objectFit: 'cover', borderRadius: '10px' }} />
-              <h5 className="text-center">Lorem Ipsum dolor amet</h5>
+              <h5 className="text-center text-collor">Lorem Ipsum dolor amet</h5>
             </Col>
             <Col sm={4} className='d-flex flex-column align-items-center'>
               <img src={study} alt="rencana2" className="mb-4 img-fluid" style={{ width: '250px', height: '250px', objectFit: 'cover', borderRadius: '10px' }} />
-              <h5 className="text-center">Lorem Ipsum dolor amet</h5>
+              <h5 className="text-center text-collor">Lorem Ipsum dolor amet</h5>
             </Col>
           </Row>
 
           <Row className="justify-content-center mt-5">
             <Col sm={4} className='d-flex flex-column align-items-center'>
               <img src={study} alt="rencana3" className="mb-4 img-fluid" style={{ width: '250px', height: '250px', objectFit: 'cover', borderRadius: '10px' }} />
-              <h5 className="text-center">Lorem Ipsum dolor amet</h5>
+              <h5 className="text-center text-collor">Lorem Ipsum dolor amet</h5>
             </Col>
             <Col sm={4} className='d-flex flex-column align-items-center'>
               <img src={study} alt="rencana4" className="mb-4 img-fluid" style={{ width: '250px', height: '250px', objectFit: 'cover', borderRadius: '10px' }} />
-              <h5 className="text-center">Lorem Ipsum dolor amet</h5>
+              <h5 className="text-center text-collor">Lorem Ipsum dolor amet</h5>
             </Col>
           </Row>
         </Container>
@@ -64,7 +64,7 @@ const About = () => {
       {/* Bagian Contact */}
       <div>
         <Container className="mt-5 pt-5">
-          <h2 className="text-center text-white bold-text">CONTACT</h2>
+          <h2 className="text-center text-collor bold-text">CONTACT</h2>
         </Container>
         <Container
           fluid
@@ -142,16 +142,16 @@ const About = () => {
 
               {/* Ikon Sosial Media di bagian bawah */}
               <div className="d-flex justify-content-start mt-3">
-  <div className="social-icon">
-    <FontAwesomeIcon icon={faFacebookF} />
-  </div>
-  <div className="social-icon mx-2">
-    <FontAwesomeIcon icon={faTwitter} />
-  </div>
-  <div className="social-icon">
-    <FontAwesomeIcon icon={faInstagram} />
-  </div>
-</div>
+                <div className="social-icon">
+                  <FontAwesomeIcon icon={faFacebookF} />
+                </div>
+                <div className="social-icon mx-2">
+                  <FontAwesomeIcon icon={faTwitter} />
+                </div>
+                <div className="social-icon">
+                  <FontAwesomeIcon icon={faInstagram} />
+                </div>
+              </div>
 
             </Col>
 

@@ -16,12 +16,12 @@
   }
 
   /* home */
-  .text-white {
-    color: #D3D3D3 !important;
+  .text-black {
+    color: #333333 !important;
   }
 
   .text-collor {
-    color: #333333 !important;
+    color: #D3D3D3 !important;
   }
 
   .bold-text {
@@ -40,16 +40,16 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: yellow;
+    background-color: #F4CE74;
     border-radius: 50%;
-    color: black; /* Warna ikon */
+    color: #333333; /* Warna ikon */
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
   .social-icon:hover {
-    background-color: gold;
+    background-color: white;
     transform: scale(1.1);
   }
   
