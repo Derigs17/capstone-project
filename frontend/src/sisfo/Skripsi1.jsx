@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '.././css/main.css';
+import './Inf.css';
 
 function Skripsi1() {
 
@@ -18,7 +18,7 @@ function Skripsi1() {
     setValues({...values, [e.target.name]:[e.target.value]})
   }
 
-  const handleSubmit = (e) => {
+  const handleNext = (e) => {
     e.preventDefault()
     console.log(values)
     navigate('/skripsi2')
@@ -32,10 +32,8 @@ function Skripsi1() {
 
   return (
     <div className="container">
-      <div className="judul">
       <h1>Form Penyerahan Skripsi</h1>
-      </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleNext}>
 
         {/* nama */}
         <label htmlFor='fullname'>Nama Lengkap*</label>
@@ -53,9 +51,7 @@ function Skripsi1() {
           onChange={(e) => handleChanges(e)} required value={values.contact}/>
         
         {/* tombol | ini harus diganti next button*/}
-        <div className="form-container">
-          <button type="submit">Next</button>
-        </div>
+        <button onClick={handleNext} className="next-button">Next</button>
 
       </form>
     </div>

@@ -2,7 +2,7 @@
 //Form penyerahan skripsi inf page 2
 
 import { useState } from 'react';
-import '.././css/main.css';
+import './Inf.css';
 
 function Skripsi2() {
 
@@ -35,9 +35,7 @@ function Skripsi2() {
 
   return (
     <div className="container"> 
-    <div className="judul">
       <h1>Form Penyerahan Skripsi</h1>
-    </div>
       <form onSubmit={handleSubmit}>
 
         {/* judul skripsi */}
@@ -72,9 +70,7 @@ function Skripsi2() {
         </select>
       
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit">Submit</button>
 
       </form>
     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import '../../css/main.css';
+import "./New.css";
 
 function Perusahaan() {
   const companies = [
@@ -20,10 +20,8 @@ function Perusahaan() {
   ];
  
   return (
-    <div className="containerz">
-      <div className="judul">
+    <div className="container">
       <h1>Perusahaan</h1>
-      </div>
       <p>
         Kamu berada di halaman daftar perusahaan yang telah bekerjasama dengan
         Fasilkom Unsika

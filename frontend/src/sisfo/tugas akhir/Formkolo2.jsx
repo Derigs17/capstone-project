@@ -1,10 +1,10 @@
 
-//Form Pendaftaran Yudisium
+//Form Pendaftaran Kolokium
 
 import { useState } from 'react';
-import '../../css/main.css';
+import '../Inf.css';
 
-function Formyudis2() {
+function Formkolo2() {
 
   const [values, setValues] = useState({
     email: '',
@@ -13,13 +13,15 @@ function Formyudis2() {
     judulskripsiindo: '',
     judulskripsiing: '',
     contact:'',
-    buktidospem: '',
     namadospem1: '',
     namadospem2: '',
-    namadosji1:'',
-    namadosji2:'',
-    fileskripsi:'',
-    buktiloa:''
+    buktiukt: '',
+    buktikrs: '',
+    buktitranskrip:'',
+    fileskripsi: '',
+    buktidospem: '',
+    buktiplagiarisme:'',
+    buktimagang:''
   })
 
   const handleChanges = (e) => {
@@ -38,22 +40,22 @@ function Formyudis2() {
       judulskripsiindo: '',
       judulskripsiing: '',
       contact:'',
-      buktidospem: '',
       namadospem1: '',
       namadospem2: '',
-      namadosji1:'',
-      namadosji2:'',
-      fileskripsi:'',
-      buktiloa:''
+      buktiukt: '',
+      buktikrs: '',
+      buktitranskrip:'',
+      fileskripsi: '',
+      buktidospem: '',
+      buktiplagiarisme:'',
+      buktimagang:''
     })
   }
 
 
   return (
     <div className="container"> 
-    <div className="judul">
-      <h1>Form Pendaftaran Yudisium</h1>
-    </div>
+      <h1>Form Pendaftaran Kolokium</h1>
       <form onSubmit={handleSubmit}>
 
         {/* email */}
@@ -84,11 +86,9 @@ function Formyudis2() {
         {/* no wa */}
         <label htmlFor='contact'>No Whatsapp</label>
           <input type="text" placeholder ="Masukan No Whatsapp" name="contact" 
-          onChange={(e) => handleChanges(e)} required value={values.contact}/>
+          onChange={(e) => handleChanges(e)} required value={values.contact
 
-        {/* bukti dospem */}
-        <label htmlFor='buktidospem'>Unggah Bukti persetujuan dosen pembimbing 1 dan 2, dosen penguji 1 dan 2 atas revisi skripsi pasca kolokium (Jadikan semua capture WA di satu file gambar atau file pdf) untuk daftar yudisium, format *.img atau .pdf, max file size 10 MB.</label>
-        <input type='file' placeholder='pilih file' name='buktidospem' onChange={(e) => handleChanges(e)} required value={values.buktidospem}/>
+          }/>
 
         {/* nama dospem 1*/}
         <label htmlFor='namadospem1'>Nama Dosen Pembimbing Skripsi 1</label>
@@ -166,98 +166,40 @@ function Formyudis2() {
           <option value="dosen33">Yuyun Umaidah, M.Kom.</option>
         </select>
 
-        {/* nama dosen penguji 1*/}
-        <label htmlFor='namadosji1'>Nama Dosen Penguji Kolokium 1</label>
-        <select name='namadosji1' id='namadosji1' onChange={(e) => handleChanges(e)} required value={values.namadosji1}>
-          <option value="dosen1">Adhi Rizal, MT.</option>
-          <option value="dosen2">Agung Susilo Yuda Irawan, M.Kom.</option>
-          <option value="dosen3">Aji Primajaya, S.Si., M.Kom.</option>
-          <option value="dosen4">Apriade Voutama, M.Kom.</option>
-          <option value="dosen5">Aries Suharso, S.Si., M.Kom</option>
-          <option value="dosen6">Arip Solehudin, M.Kom.</option>
-          <option value="dosen7">Asep Jamaludin, S.Si., M.Kom.</option>
-          <option value="dosen8">Azhari Ali Ridha, S.Kom., MMSI.</option>
-          <option value="dosen9">Betha Nurina Sari, M.Kom.</option>
-          <option value="dosen10">Budi Arif Darmawan, M.Kom.</option>
-          <option value="dosen11">Carudin, M.Kom.</option>
-          <option value="dosen12">Dr. Chaerur Rozikin, M.Kom.</option>
-          <option value="dosen13">Dadang Yusup, M.Kom.</option>
-          <option value="dosen14">Didi Juardi, S.T., M.Kom.</option>
-          <option value="dosen15">E. Haodudin Nurkifli, S.T., M.Cs., Ph.D..</option>
-          <option value="dosen16">Garno, M.Kom.</option>
-          <option value="dosen17">H. Bagja Nugraha, ST., M.Kom.</option>
-          <option value="dosen18">Hannie, S.Kom., MMSI.m.</option>
-          <option value="dosen19">H. Bagja Nugraha, ST., M.Kom.</option>
-          <option value="dosen20">Iqbal Maulana, S.Si., M.Sc.</option>
-          <option value="dosen21">Dr. Jajam Haerul Jaman, S.E., M.Kom.</option>
-          <option value="dosen22">Kamal Prihandani, M.Kom.</option>
-          <option value="dosen23">M. Jajuli, M.Si.</option>
-          <option value="dosen24">Nina Sulistiyowati, S.T., M.Kom.</option>
-          <option value="dosen25">Nono Heryana, M.Kom.</option>
-          <option value="dosen26">Dr. Oman Komarudin, S.Si., M.Kom.</option>
-          <option value="dosen27">Purwantoro, M.Kom.</option>
-          <option value="dosen28">Rini Mayasari, M.Kom.</option>
-          <option value="dosen29">Riza Ibnu Adam, M.Si.</option>
-          <option value="dosen30">Susilawati, M.Si.</option>
-          <option value="dosen31">Tesa Nur Padilah, S.Si., M.Sc.</option>
-          <option value="dosen32">Ultach Enri, M.Kom.</option>
-          <option value="dosen33">Yuyun Umaidah, M.Kom.</option>
-        </select>
+        {/* bukti ukt */}
+        <label htmlFor='buktiukt'>Upload Bukti Lunas Administrasi (UKT)</label>
+        <input type='file' placeholder='pilih file' name='buktiukt' onChange={(e) => handleChanges(e)} required value={values.buktiukt}/>
 
-        {/* nama dosen penguji 2*/}
-        <label htmlFor='namadosji2'>Nama Dosen Penguji Kolokium 2</label>
-        <select name='namadosji2' id='namadosji2' onChange={(e) => handleChanges(e)} required value={values.namadosji2}>
-          <option value="dosen1">Adhi Rizal, MT.</option>
-          <option value="dosen2">Agung Susilo Yuda Irawan, M.Kom.</option>
-          <option value="dosen3">Aji Primajaya, S.Si., M.Kom.</option>
-          <option value="dosen4">Apriade Voutama, M.Kom.</option>
-          <option value="dosen5">Aries Suharso, S.Si., M.Kom</option>
-          <option value="dosen6">Arip Solehudin, M.Kom.</option>
-          <option value="dosen7">Asep Jamaludin, S.Si., M.Kom.</option>
-          <option value="dosen8">Azhari Ali Ridha, S.Kom., MMSI.</option>
-          <option value="dosen9">Betha Nurina Sari, M.Kom.</option>
-          <option value="dosen10">Budi Arif Darmawan, M.Kom.</option>
-          <option value="dosen11">Carudin, M.Kom.</option>
-          <option value="dosen12">Dr. Chaerur Rozikin, M.Kom.</option>
-          <option value="dosen13">Dadang Yusup, M.Kom.</option>
-          <option value="dosen14">Didi Juardi, S.T., M.Kom.</option>
-          <option value="dosen15">E. Haodudin Nurkifli, S.T., M.Cs., Ph.D..</option>
-          <option value="dosen16">Garno, M.Kom.</option>
-          <option value="dosen17">H. Bagja Nugraha, ST., M.Kom.</option>
-          <option value="dosen18">Hannie, S.Kom., MMSI.m.</option>
-          <option value="dosen19">H. Bagja Nugraha, ST., M.Kom.</option>
-          <option value="dosen20">Iqbal Maulana, S.Si., M.Sc.</option>
-          <option value="dosen21">Dr. Jajam Haerul Jaman, S.E., M.Kom.</option>
-          <option value="dosen22">Kamal Prihandani, M.Kom.</option>
-          <option value="dosen23">M. Jajuli, M.Si.</option>
-          <option value="dosen24">Nina Sulistiyowati, S.T., M.Kom.</option>
-          <option value="dosen25">Nono Heryana, M.Kom.</option>
-          <option value="dosen26">Dr. Oman Komarudin, S.Si., M.Kom.</option>
-          <option value="dosen27">Purwantoro, M.Kom.</option>
-          <option value="dosen28">Rini Mayasari, M.Kom.</option>
-          <option value="dosen29">Riza Ibnu Adam, M.Si.</option>
-          <option value="dosen30">Susilawati, M.Si.</option>
-          <option value="dosen31">Tesa Nur Padilah, S.Si., M.Sc.</option>
-          <option value="dosen32">Ultach Enri, M.Kom.</option>
-          <option value="dosen33">Yuyun Umaidah, M.Kom.</option>
-        </select>
+        {/* bukti krs */}
+        <label htmlFor='buktikrs'>Bukti KRS ambil Skripsi (yang telah ditandatangani oleh dosen wali)</label>
+        <input type='file' placeholder='pilih file' name='buktikrs' onChange={(e) => handleChanges(e)} required value={values.buktikrs}/>
+
+        {/* bukti transkrip */}
+        <label htmlFor='buktitranskrip'>Bukti Transkrip Sementara dari SISKA</label>
+        <input type='file' placeholder='pilih file' name='buktitranskrip' onChange={(e) => handleChanges(e)} required value={values.buktitranskrip} />
 
          {/* file skripsi */}
-         <label htmlFor='fileskripsi'>Upload Softfile SKRIPSI berekstensi Word/Document (*.docx/*.doc) lalu di zip/rar (dari cover, lampiran, sampai daftar pustaka)</label>
+         <label htmlFor='fileskripsi'>Upload File Skripsi (lengkap dari cover sampai lampiran), format dokumen (NAMA_SKRIPSI.pdf) , contoh : ANANDA_SKRIPSI.pdf</label>
         <input type='file' placeholder='pilih file' name='fileskripsi' onChange={(e) => handleChanges(e)} required value={values.fileskripsi}/>
 
-        {/* bukti loa */}
-        <label htmlFor='buktiloa'>Upload Bukti sudah Upload BuktiLOA Artikel Ilmiah TA</label>
-        <input type='file' placeholder='pilih file' name='buktiloa' onChange={(e) => handleChanges(e)} required value={values.buktiloa}/>
+        {/* bukti dospem */}
+        <label htmlFor='buktidospem'>Upload Bukti Persetujuan Dosen Pembimbing 1 dan 2 (Screenshot/Capture/Printscreen dari media komunikasi misalnya WA, email, dst) dalam format gambar (*.img), max file size IMB</label>
+        <input type='file' placeholder='pilih file' name='buktidospem' onChange={(e) => handleChanges(e)} required value={values.buktidospem}/>
+
+        {/* bukti plagiarisme */}
+        <label htmlFor='buktiplagiarisme'>Upload Bukti Cek Plagiarisme Bab 1-5 max 30% dalam format gambar (*.jpg), max file size IMB (Upload 3 gambar)</label>
+        <input type='file' placeholder='pilih file' name='buktiplagiarisme' onChange={(e) => handleChanges(e)} required value={values.buktiplagiarisme}/>
+
+        {/* bukti laporan magang */}
+        <label htmlFor='buktimagang'>Upload Bukti capture sudah mengumpulkan laporan magang</label>
+        <input type='file' placeholder='pilih file' name='buktimagang' onChange={(e) => handleChanges(e)} required value={values.buktimagang}/>
 
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit">Submit</button>
 
       </form>
     </div>
   );
 }
 
-export default Formyudis2;
+export default Formkolo2;

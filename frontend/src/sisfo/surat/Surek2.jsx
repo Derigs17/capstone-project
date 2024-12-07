@@ -2,7 +2,7 @@
 //Surat Izin Penelitian
 
 import { useState } from 'react';
-import '../../css/main.css';
+import '../Inf.css';
 
 function Surek2() {
 
@@ -51,9 +51,7 @@ function Surek2() {
 
   return (
     <div className="container"> 
-    <div className="judul">
       <h1>Form Permohonan surat rekomendasi</h1>
-    </div>
       <form onSubmit={handleSubmit}>
 
         {/* nama */}
@@ -129,9 +127,7 @@ function Surek2() {
           onChange={(e) => handleChanges(e)} required value={values.tujuan}/>
         
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit">Submit</button>
 
       </form>
     </div>

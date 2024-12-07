@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../css/main.css';
+import '../Inf.css';
 
 function Surek1() {
 
@@ -16,7 +16,7 @@ function Surek1() {
     setValues({...values, [e.target.name]:[e.target.value]})
   }
 
-  const handleSubmit = (e) => {
+  const handleNext = (e) => {
     e.preventDefault()
     console.log(values)
     navigate('/Surek2')
@@ -28,22 +28,18 @@ function Surek1() {
 
   return (
     <div className="container">
-      <div className="judul">
       <h1>Form Permohonan surat rekomendasi</h1>
-      </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleNext}>
 
         {/* lingkup surat */}
         <label htmlFor='jenissurat'>Jenis Surat</label>
-        <select name='jenissurat' id='jenissurat' onChange={(e) => handleChanges(e)} required value={values.jenissurat}>
-          <option value="Rekomendasi">Rekomendasi</option>
-          <option value="Surat Keterangan TidakMenerimaBeasiswa">Surat Keterangan Tidak Menerima Beasiswa</option>
-        </select>
+          <input type="radio" name="jenissurat" 
+          onChange={(e) => handleChanges(e)} required value={values.jenissurat}/> Rekomendasi
+          <input type="radio" name="jenissurat" 
+          onChange={(e) => handleChanges(e)}/> Surat Keterangan Tidak Menerima Beasiswa
         
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Next</button>
-        </div>
+        <button onClick={handleNext} className="next-button">Next</button>
 
       </form>
     </div>

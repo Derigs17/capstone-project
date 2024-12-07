@@ -2,7 +2,7 @@
 //Form Pengajuan Ulang Proposal atau Skripsi dan Dosen Pembimbing Tugas Akhir
 
 import { useState } from 'react';
-import '../Inf.css';
+import '../../css/main.css';
 
 function Formdospem2() {
 
@@ -30,7 +30,9 @@ function Formdospem2() {
 
   return (
     <div className="container"> 
+    <div className="judul">
       <h1>Form Pengajuan Ulang Proposal atau Skripsi dan Dosen Pembimbing Tugas Akhir</h1>
+    </div>
       <form onSubmit={handleSubmit}>
 
         {/* judul proposal*/}
@@ -82,7 +84,9 @@ function Formdospem2() {
           onChange={(e) => handleChanges(e)} required value={values.usulandospem}/>
 
         {/* tombol */}
-        <button type="submit">Submit</button>
+        <div className="form-container">
+          <button type="submit">Submit</button>
+        </div>
 
       </form>
     </div>

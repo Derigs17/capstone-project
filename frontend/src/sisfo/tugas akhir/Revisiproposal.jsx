@@ -2,7 +2,7 @@
 //Form Upload Soft File Revisi Proposal
 
 import { useState } from 'react';
-import '../../css/main.css';
+import '../Inf.css';
 
 function Revisiproposal() {
 
@@ -39,9 +39,7 @@ function Revisiproposal() {
 
   return (
     <div className="container"> 
-    <div className="judul">
       <h1>Form Upload Soft File Revisi Proposal</h1>
-    </div>
       <form onSubmit={handleSubmit}>
 
         {/* nama */}
@@ -77,9 +75,7 @@ function Revisiproposal() {
           onChange={(e) => handleChanges(e)} required value={values.judulproposalrevisi}/>
 
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit">Submit</button>
 
       </form>
     </div>

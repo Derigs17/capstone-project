@@ -1,7 +1,7 @@
 // Form Penyerahan Laporan Magang
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../css/main.css';
+import '../Inf.css';
 
 function Mk() {
   const navigate = useNavigate();
@@ -28,9 +28,7 @@ function Mk() {
 
   return (
     <div className="container">
-      <div className="judul">
       <h1>Form Pendaftaran Magang Kompetisi</h1>
-      </div>
       <form onSubmit={handleSubmit}>
         {/* Tipe Kompetisi */}
         <label htmlFor="tipekompetisi">Tipe Kompetisi</label>
@@ -49,10 +47,7 @@ function Mk() {
         </select>
 
         {/* Tombol */}
-        <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
-
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Sempro1.css";
+import '../../css/main.css';
 import { useNavigate } from 'react-router-dom';
 
 function Formyudis1() {
@@ -15,13 +15,16 @@ function Formyudis1() {
     "PASTIKAN ANDA MEMBACA DESKRIPSI PENGISIAN DAN CEK ULANG DATA YANG DIINPUT SEBELUM SUBMIT.",
   ];
 
-  const handleNext = (e) => {
+  const handleSubmit = (e) => {
     navigate('/Formkolo2');
   }
 
   return (
-    <div className="container">
+    <div className="containers">
+      <div className="judul">
       <h1>Instruksi</h1>
+      </div>
+      <form onSubmit={handleSubmit}>
       <ul>
         {instructions.map((instruction, index) => (
           <li key={index}> {instruction}</li>
@@ -29,8 +32,10 @@ function Formyudis1() {
       </ul>
  
       {/* tombol | ini harus diganti next button*/}
-      <button onClick={handleNext} className="next-button">Next</button>
-
+      <div className="form-container">
+          <button type="submit">Next</button>
+        </div>
+      </form>
     </div>
   );
 }

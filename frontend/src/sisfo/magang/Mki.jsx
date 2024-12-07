@@ -2,7 +2,7 @@
 //Form Pendaftaran magang individu
 
 import { useState } from 'react';
-import '../../css/main.css';
+import '../Inf.css';
 
 function Mki() {
 
@@ -44,9 +44,7 @@ function Mki() {
 
   return (
     <div className="container"> 
-    <div className="judul">
       <h1>Form Pendaftaran Magang Individu</h1>
-    </div>
       <form onSubmit={handleSubmit}>
 
         {/* nama */}
@@ -105,9 +103,7 @@ function Mki() {
           onChange={(e) => handleChanges(e)} required value={values.rencanaproduk}/>
 
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit">Submit</button>
 
       </form>
     </div>

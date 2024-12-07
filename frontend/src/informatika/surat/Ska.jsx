@@ -2,7 +2,7 @@
 //Surat Keterangan Aktif 
 
 import { useState } from 'react';
-import '../Inf.css';
+import '../../css/main.css';
 
 function Ska() {
 
@@ -44,7 +44,9 @@ function Ska() {
 
   return (
     <div className="container"> 
+    <div className="judul">
       <h1>Form Permohonan Surat Keterangan Aktif</h1>
+    </div>
       <form onSubmit={handleSubmit}>
 
         {/* nama */}
@@ -103,7 +105,9 @@ function Ska() {
         <input type='file' placeholder='pilih file' name='buktiukt' onChange={(e) => handleChanges(e)} required value={values.buktiukt}/>
 
         {/* tombol */}
-        <button type="submit">Submit</button>
+        <div className="form-container">
+          <button type="submit">Submit</button>
+        </div>
 
       </form>
     </div>

@@ -2,7 +2,7 @@
 //Form Pendaftaran magang individu
 
 import { useState } from 'react';
-import '../Inf.css';
+import '../../css/main.css';
 
 function Mkk() {
 
@@ -46,7 +46,9 @@ function Mkk() {
 
   return (
     <div className="container"> 
+    <div className="judul">
       <h1>Form Pendaftaran Magang Kelompok</h1>
+    </div>
       <form onSubmit={handleSubmit}>
 
         {/* nama */}
@@ -110,7 +112,9 @@ function Mkk() {
           onChange={(e) => handleChanges(e)} required value={values.rencanaproduk}/>
 
         {/* tombol */}
-        <button type="submit">Submit</button>
+        <div className="form-container">
+          <button type="submit">Submit</button>
+        </div>
 
       </form>
     </div>

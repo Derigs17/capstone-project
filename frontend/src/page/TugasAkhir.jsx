@@ -1,6 +1,13 @@
 import { Dropdown, Container, Col, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const TugasAkhir = () => {
+    const navigate = useNavigate();
+
+    const handleSelect = (eventKey) => {
+        navigate(eventKey);
+    };
+
     return (
         <>
             <div>
@@ -36,7 +43,7 @@ const TugasAkhir = () => {
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu style={{ width: '60%' }}> {/* Set width to 60% */}
-                        <Dropdown.Item href="#">Pengajuan Judul Proposal</Dropdown.Item>
+                        <Dropdown.Item eventKey="/Ajukanjudul" onSelect={handleSelect}>Pengajuan Judul Proposal</Dropdown.Item>
                         <Dropdown.Item href="#">Pendaftaran Seminar Proposal</Dropdown.Item>
                         <Dropdown.Item href="#">Upload Revisi Proposal</Dropdown.Item>
                         <Dropdown.Item href="#">Pendaftaran Kolokium</Dropdown.Item>
@@ -50,7 +57,7 @@ const TugasAkhir = () => {
                 </Dropdown>
             </div>
         </>
-    );
+    ); 
 }
 
 export default TugasAkhir;

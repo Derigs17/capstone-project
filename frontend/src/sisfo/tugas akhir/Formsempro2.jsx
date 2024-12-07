@@ -1,21 +1,24 @@
 
-//Form Ajukan Judul Skripsi
+//Form Pendaftaran Seminar Proposal
 
 import { useState } from 'react';
-import '../../css/main.css';
+import '../Inf.css';
 
-function AjukanJudul() {
+function Formsempro2() {
 
   const [values, setValues] = useState({
     email: '',
     fullname: '',
     number: '',
     judulproposal: '',
-    alasanproposal: '',
-    usulandospem: '',
+    contact:'',
+    namadospem: '',
+    buktiukt: '',
     buktikrs: '',
-    estimasi: ''
-  }) 
+    proposalskripsi: '',
+    buktidospem: '',
+    buktiplagiarisme:''
+  })
 
   const handleChanges = (e) => {
     setValues({...values, [e.target.name]:[e.target.value]})
@@ -25,25 +28,26 @@ function AjukanJudul() {
     e.preventDefault()
     console.log(values)
     alert("Form berhasil disubmit!");
-    
+
     setValues({
       email: '',
       fullname: '',
       number: '',
       judulproposal: '',
-      alasanproposal: '',
-      usulandospem: '',
+      contact:'',
+      namadospem: '',
+      buktiukt: '',
       buktikrs: '',
-      estimasi: ''
-    })  
+      proposalskripsi: '',
+      buktidospem: '',
+      buktiplagiarisme:''
+    })
   }
 
 
   return (
     <div className="container"> 
-    <div className="judul">
-      <h1>Form Pengajuan Judul Skripsi</h1>
-    </div>
+      <h1>Form Pendaftaran Seminar Proposal</h1>
       <form onSubmit={handleSubmit}>
 
         {/* email */}
@@ -66,14 +70,14 @@ function AjukanJudul() {
           <input type="text" placeholder ="Masukan judul proposal skripsi" name="judulproposal" 
           onChange={(e) => handleChanges(e)} required value={values.judulproposal}/>
 
-        {/* alasan memilih judul proposal tersebut */}
-        <label htmlFor='alasanproposal'>Alasan Memilih Judul Proposal tersebut</label>
-          <input type="text" placeholder ="Masukan alasan memilih judul proposal tersebut" name="alasanproposal" 
-          onChange={(e) => handleChanges(e)} required value={values.alasanproposal}/>
+        {/* no wa */}
+        <label htmlFor='contact'>No Whatsapp</label>
+          <input type="text" placeholder ="Masukan No Whatsapp" name="contact" 
+          onChange={(e) => handleChanges(e)} required value={values.contact}/>
 
-        {/* usulan dospem */}
-        <label htmlFor='usulandospem'>Usulan Dosen Pembimbing</label>
-        <select name='usulandospem' id='usulandospem' onChange={(e) => handleChanges(e)} required value={values.usulandospem}>
+        {/* nama dospem */}
+        <label htmlFor='namadospem'>Nama Dosen Pembimbing</label>
+        <select name='namadospem' id='namadospem' onChange={(e) => handleChanges(e)} required value={values.namadospem}>
           <option value="dosen1">Adhi Rizal, MT.</option>
           <option value="dosen2">Agung Susilo Yuda Irawan, M.Kom.</option>
           <option value="dosen3">Aji Primajaya, S.Si., M.Kom.</option>
@@ -109,25 +113,32 @@ function AjukanJudul() {
           <option value="dosen33">Yuyun Umaidah, M.Kom.</option>
         </select>
 
-        {/* bukti krs */}
-        <label htmlFor='buktikrs'>Bukti KRS ambil TUGAS AKHIR (Jika tidak mengambil KRS Tugas Akhir tidak perlu upload)</label>
-        <input type='file' placeholder='pilih file' name='buktikrs' onChange={(e) => handleChanges(e)} value={values.buktikrs}/>
+        {/* bukti ukt */}
+        <label htmlFor='buktiukt'>Upload Bukti Lunas Administrasi (UKT)</label>
+        <input type='file' placeholder='pilih file' name='buktiukt' onChange={(e) => handleChanges(e)} required value={values.buktiukt}/>
 
+         {/* bukti krs */}
+         <label htmlFor='buktikrs'>Bukti KRS ambil Skripsi (yang telah ditandatangani oleh dosen wali)</label>
+        <input type='file' placeholder='pilih file' name='buktikrs' onChange={(e) => handleChanges(e)} required value={values.buktikrs}/>
 
-        {/* estimasi */}
-        <label htmlFor='estimasi'>Estimasi Anda akan menyelesaikan proposal bab 1-3 berapa lama untuk maju seminar proposal?</label>
-          <input type="text" placeholder ="Masukan estimasi anda" name="estimasi" 
-          onChange={(e) => handleChanges(e)} required value={values.estimasi}/>
+         {/* proposal skripsi */}
+         <label htmlFor='proposalskripsi'>Upload File Proposal Skripsi (mulai cover sampai daftar pustaka), format dokumen (NAMA_Proposal.pdf) max file size 10 MB</label>
+        <input type='file' placeholder='pilih file' name='proposalskripsi' onChange={(e) => handleChanges(e)} required value={values.proposalskripsi}/>
 
+        {/* bukti dospem */}
+        <label htmlFor='buktidospem'>Upload Bukti Persetujuan Dosen Pembimbing (Screenshot/Capture/Printscreen dari media komunikasi misalnya WA, email, dst) dalam format gambar (*.img), max file size IMB</label>
+        <input type='file' placeholder='pilih file' name='buktidospem' onChange={(e) => handleChanges(e)} required value={values.buktidospem}/>
+
+        {/* bukti plagiarisme */}
+        <label htmlFor='buktiplagiarisme'>Upload Bukti Cek Plagiarisme Bab 1-3 dalam format gambar (*.jpg), max file size IMB (Upload 3 gambar)</label>
+        <input type='file' placeholder='pilih file' name='buktiplagiarisme' onChange={(e) => handleChanges(e)} required value={values.buktiplagiarisme}/>
 
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit">Submit</button>
 
       </form>
     </div>
   );
 }
 
-export default AjukanJudul;
+export default Formsempro2;

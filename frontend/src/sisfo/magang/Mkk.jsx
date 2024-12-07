@@ -2,14 +2,15 @@
 //Form Pendaftaran magang individu
 
 import { useState } from 'react';
-import '../../css/main.css';
+import '../Inf.css';
 
-function Mki() {
+function Mkk() {
 
   const [values, setValues] = useState({
     fullname: '',
-    contact: '',
-    number: '',
+    contactketua: '',
+    numberketua: '',
+    datatim: '',
     namaevent: '',
     tingkatevent: '',
     masakompetisi: '',
@@ -30,8 +31,9 @@ function Mki() {
 
     setValues({
       fullname: '',
-      contact: '',
-      number: '',
+      contactketua: '',
+      numberketua: '',
+      datatim: '',
       namaevent: '',
       tingkatevent: '',
       masakompetisi: '',
@@ -44,9 +46,7 @@ function Mki() {
 
   return (
     <div className="container"> 
-    <div className="judul">
-      <h1>Form Pendaftaran Magang Individu</h1>
-    </div>
+      <h1>Form Pendaftaran Magang Kelompok</h1>
       <form onSubmit={handleSubmit}>
 
         {/* nama */}
@@ -55,14 +55,19 @@ function Mki() {
           onChange={(e) => handleChanges(e)} required value={values.fullname}/>
         
         {/* no wa */}
-        <label htmlFor='contact'>No Whatsapp</label>
-          <input type="text" placeholder ="Masukan No Whatsapp" name="contact" 
-          onChange={(e) => handleChanges(e)} required value={values.contact}/>
+        <label htmlFor='contactketua'>No Whatsapp Ketua</label>
+          <input type="text" placeholder ="Masukan No Whatsapp ketua" name="contactketua" 
+          onChange={(e) => handleChanges(e)} required value={values.contactketua}/>
 
-        {/* npm */}
-        <label htmlFor='number'>NPM</label>
-          <input type="text" placeholder ="Masukan NPM" name="number" 
-          onChange={(e) => handleChanges(e)} required value={values.number}/>
+        {/* npm ketua*/}
+        <label htmlFor='numberketua'>NPM Ketua</label>
+          <input type="text" placeholder ="Masukan NPM ketua" name="numberketua" 
+          onChange={(e) => handleChanges(e)} required value={values.numberketua}/>
+
+        {/* data tim*/}
+        <label htmlFor='datatim'>Data Anggota Kelompok</label>
+          <input type="text" placeholder ="Masukan data anggota kelompok" name="datatim" 
+          onChange={(e) => handleChanges(e)} required value={values.datatim}/>
 
         {/* nama kompetisi atau event atau lomba */}
         <label htmlFor='namaevent'>Nama kompetisi/event/lomba</label>
@@ -105,13 +110,11 @@ function Mki() {
           onChange={(e) => handleChanges(e)} required value={values.rencanaproduk}/>
 
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit">Submit</button>
 
       </form>
     </div>
   );
 }
 
-export default Mki;
+export default Mkk;

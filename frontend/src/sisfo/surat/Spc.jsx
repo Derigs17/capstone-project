@@ -2,7 +2,7 @@
 //Surat Permohonan Cuti
 
 import { useState } from 'react';
-import '../../css/main.css';
+import '../Inf.css';
 
 function Spc() {
 
@@ -43,9 +43,7 @@ function Spc() {
 
   return (
     <div className="container"> 
-    <div className="judul">
       <h1>Form Permohonan Surat Pengajuan Cuti</h1>
-    </div>
       <form onSubmit={handleSubmit}>
 
         {/* nama */}
@@ -95,9 +93,7 @@ function Spc() {
         <input type='file' placeholder='pilih file' name='buktiukt' onChange={(e) => handleChanges(e)} required value={values.buktiukt}/>
 
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit">Submit</button>
 
       </form>
     </div>

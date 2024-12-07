@@ -2,7 +2,8 @@
 //Form Pendaftaran Kolokium
 
 import { useState } from 'react';
-import '../Inf.css';
+// import '../Inf.css';
+import '../../css/main.css';
 
 function Formkolo2() {
 
@@ -23,7 +24,7 @@ function Formkolo2() {
     buktiplagiarisme:'',
     buktimagang:''
   })
-
+ 
   const handleChanges = (e) => {
     setValues({...values, [e.target.name]:[e.target.value]})
   }
@@ -55,7 +56,9 @@ function Formkolo2() {
 
   return (
     <div className="container"> 
+    <div className="judul">
       <h1>Form Pendaftaran Kolokium</h1>
+    </div>
       <form onSubmit={handleSubmit}>
 
         {/* email */}
@@ -86,9 +89,7 @@ function Formkolo2() {
         {/* no wa */}
         <label htmlFor='contact'>No Whatsapp</label>
           <input type="text" placeholder ="Masukan No Whatsapp" name="contact" 
-          onChange={(e) => handleChanges(e)} required value={values.contact
-
-          }/>
+          onChange={(e) => handleChanges(e)} required value={values.contact}/>
 
         {/* nama dospem 1*/}
         <label htmlFor='namadospem1'>Nama Dosen Pembimbing Skripsi 1</label>
@@ -195,7 +196,9 @@ function Formkolo2() {
         <input type='file' placeholder='pilih file' name='buktimagang' onChange={(e) => handleChanges(e)} required value={values.buktimagang}/>
 
         {/* tombol */}
-        <button type="submit">Submit</button>
+        <div className="form-container">
+          <button type="submit">Submit</button>
+        </div>
 
       </form>
     </div>

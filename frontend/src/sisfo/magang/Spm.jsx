@@ -2,7 +2,7 @@
 //Surat Permohonan Magang
 
 import { useState } from 'react';
-import '../../css/main.css';
+import '../Inf.css';
 
 function Spm() {
 
@@ -47,9 +47,7 @@ function Spm() {
 
   return (
     <div className="container"> 
-     <div className="judul">
       <h1>Form Permohonan Surat Permohonan Magang</h1>
-      </div>
       <form onSubmit={handleSubmit}>
 
         {/* nama */}
@@ -114,9 +112,7 @@ function Spm() {
 
 
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit">Submit</button>
 
       </form>
     </div>

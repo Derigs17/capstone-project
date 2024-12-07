@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../css/main.css';
+import '../Inf.css';
 
 function Formdospem1() {
 
@@ -19,7 +19,7 @@ function Formdospem1() {
     setValues({...values, [e.target.name]:[e.target.value]})
   }
 
-  const handleSubmit = (e) => {
+  const handleNext = (e) => {
     e.preventDefault()
     console.log(values)
     navigate('/Formdospem2')
@@ -34,10 +34,8 @@ function Formdospem1() {
 
   return (
     <div className="container">
-      <div className="judul">
       <h1>Form Pengajuan Ulang Proposal atau Skripsi dan Dosen Pembimbing Tugas Akhir</h1>
-      </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleNext}>
 
         {/* email */}
         <label htmlFor='email'>Email</label>
@@ -56,16 +54,13 @@ function Formdospem1() {
 
         {/* tahap tugas akhir */}
         <label htmlFor='tahapta'>Tahap Tugas Akhir</label>
-        <select name='tahapta' id='tahapta' onChange={(e) => handleChanges(e)} required value={values.tahapta}>
-          <option value="tahapta1">Proposal Skripsi</option>
-          <option value="tahapta2">Skripsi</option>
-        </select>
-
-
+          <input type="radio" name="tahapta" 
+          onChange={(e) => handleChanges(e)} required value={values.tahapta}/> Proposal Skripsi
+          <input type="radio" name="tahapta" 
+          onChange={(e) => handleChanges(e)}/> Skripsi
+        
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Next</button>
-      </div>
+        <button onClick={handleNext} className="next-button">Next</button>
         
       </form>
     </div>

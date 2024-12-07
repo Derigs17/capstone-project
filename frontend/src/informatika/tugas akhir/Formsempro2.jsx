@@ -2,7 +2,7 @@
 //Form Pendaftaran Seminar Proposal
 
 import { useState } from 'react';
-import '../Inf.css';
+import '../../css/main.css';
 
 function Formsempro2() {
 
@@ -47,7 +47,9 @@ function Formsempro2() {
 
   return (
     <div className="container"> 
+    <div className="judul">
       <h1>Form Pendaftaran Seminar Proposal</h1>
+    </div>
       <form onSubmit={handleSubmit}>
 
         {/* email */}
@@ -134,7 +136,9 @@ function Formsempro2() {
         <input type='file' placeholder='pilih file' name='buktiplagiarisme' onChange={(e) => handleChanges(e)} required value={values.buktiplagiarisme}/>
 
         {/* tombol */}
-        <button type="submit">Submit</button>
+        <div className="form-container">
+          <button type="submit">Submit</button>
+        </div>
 
       </form>
     </div>

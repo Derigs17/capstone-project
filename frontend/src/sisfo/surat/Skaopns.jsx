@@ -1,20 +1,24 @@
 
-//Surat Permohonan Cuti
+//Surat Keterangan Akti Ortu PNS
 
 import { useState } from 'react';
-import '../../css/main.css';
+import '../Inf.css';
 
-function Spc() {
+function Skaopns() {
 
   const [values, setValues] = useState({
     fullname: '',
+    contact: '',
     number: '',
     prodi: '',
+    semester: '',
     periode: '',
     tahunakademik: '',
-    contact: '',
     alamat: '',
-    alasancuti: '',
+    namaortu: '',
+    nomorindukortu: '',
+    pangkatgolongan: '',
+    instansi: '',
     buktiukt: ''
   })
 
@@ -29,13 +33,17 @@ function Spc() {
 
     setValues({
       fullname: '',
+      contact: '',
       number: '',
       prodi: '',
+      semester: '',
       periode: '',
       tahunakademik: '',
-      contact: '',
       alamat: '',
-      alasancuti: '',
+      namaortu: '',
+      nomorindukortu: '',
+      pangkatgolongan: '',
+      instansi: '',
       buktiukt: ''
     })
   }
@@ -43,15 +51,18 @@ function Spc() {
 
   return (
     <div className="container"> 
-    <div className="judul">
-      <h1>Form Permohonan Surat Pengajuan Cuti</h1>
-    </div>
+      <h1>Form Permohonan Surat Keterangan Aktif Ortu PNS</h1>
       <form onSubmit={handleSubmit}>
 
         {/* nama */}
-        <label htmlFor='fullname'>Nama </label>
+        <label htmlFor='fullname'>Nama</label>
           <input type="text" placeholder="Masukan nama lengkap" name="fullname"
           onChange={(e) => handleChanges(e)} required value={values.fullname}/>
+        
+        {/* no wa */}
+        <label htmlFor='contact'>No Whatsapp</label>
+          <input type="text" placeholder ="Masukan No Whatsapp" name="contact" 
+          onChange={(e) => handleChanges(e)} required value={values.contact}/>
 
         {/* npm */}
         <label htmlFor='number'>NPM</label>
@@ -62,6 +73,20 @@ function Spc() {
         <label htmlFor='prodi'>Program Studi</label>
           <input type="text" placeholder ="Masukan Program Studi" name="prodi" 
           onChange={(e) => handleChanges(e)} required value={values.prodi}/>
+
+        {/* semester */}
+        <label htmlFor='semester'>Semester</label>
+        <select name='semester' id='semester' onChange={(e) => handleChanges(e)} required value={values.semester}>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="tingkatakhir">Tingkat Akhir</option>
+        </select>
 
         {/* periode */}
         <label htmlFor='periode'>Periode</label>
@@ -75,33 +100,41 @@ function Spc() {
           <input type="text" placeholder ="Masukan tahun akademik anda" name="tahunakademik" 
           onChange={(e) => handleChanges(e)} required value={values.tahunakademik}/>
 
-        {/* no wa */}
-        <label htmlFor='contact'>No Whatsapp</label>
-          <input type="text" placeholder ="Masukan No Whatsapp" name="contact" 
-          onChange={(e) => handleChanges(e)} required value={values.contact}/>
-
         {/* alamat */}
         <label htmlFor='alamat'>Alamat</label>
           <input type="text" placeholder ="Masukan alamat anda" name="alamat" 
           onChange={(e) => handleChanges(e)} required value={values.alamat}/>
-        
-        {/* alasan cuti */}
-        <label htmlFor='alasancuti'>Alasan Cuti</label>
-          <input type="text" placeholder ="Masukan alasan cuti" name="alasancuti" 
-          onChange={(e) => handleChanges(e)} required value={values.alasancuti}/>
 
+        {/* nama ortu */}
+        <label htmlFor='namaortu'>Nama Orang Tua</label>
+          <input type="text" placeholder ="Masukan nama ortu" name="namaortu" 
+          onChange={(e) => handleChanges(e)} required value={values.namaortu}/>
+
+        {/* nomor induk ortu */}
+        <label htmlFor='nomorindukortu'>Nomor Induk Orang Tua</label>
+          <input type="text" placeholder ="Masukan nomor induk ortu" name="nomorindukortu" 
+          onChange={(e) => handleChanges(e)} required value={values.nomorindukortu}/>
+
+        {/* pangkat atau golongan */}
+        <label htmlFor='pangkatgolongan'>Pangkat atau Golongan</label>
+          <input type="text" placeholder ="Masukan pangkat golongan" name="pangkatgolongan" 
+          onChange={(e) => handleChanges(e)} required value={values.pangkatgolongan}/>
+        
+        {/* instansi */}
+        <label htmlFor='instansi'>Instansi</label>
+          <input type="text" placeholder ="Masukan Instansi" name="instansi" 
+          onChange={(e) => handleChanges(e)} required value={values.instansi}/>
+        
         {/* bukti pembayaran ukt */}
         <label htmlFor='buktiukt'>Bukti Pembayaran UKT</label>
         <input type='file' placeholder='pilih file' name='buktiukt' onChange={(e) => handleChanges(e)} required value={values.buktiukt}/>
 
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit">Submit</button>
 
       </form>
     </div>
   );
 }
 
-export default Spc;
+export default Skaopns;

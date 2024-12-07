@@ -2,7 +2,7 @@
 //Form Ajukan Judul Skripsi
 
 import { useState } from 'react';
-import '../../css/main.css';
+import '../Inf.css';
 
 function AjukanJudul() {
 
@@ -15,7 +15,7 @@ function AjukanJudul() {
     usulandospem: '',
     buktikrs: '',
     estimasi: ''
-  }) 
+  })
 
   const handleChanges = (e) => {
     setValues({...values, [e.target.name]:[e.target.value]})
@@ -41,9 +41,7 @@ function AjukanJudul() {
 
   return (
     <div className="container"> 
-    <div className="judul">
       <h1>Form Pengajuan Judul Skripsi</h1>
-    </div>
       <form onSubmit={handleSubmit}>
 
         {/* email */}
@@ -121,9 +119,7 @@ function AjukanJudul() {
 
 
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit">Submit</button>
 
       </form>
     </div>

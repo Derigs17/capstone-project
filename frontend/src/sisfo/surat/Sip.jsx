@@ -2,7 +2,7 @@
 //Surat Izin Penelitian (Sip)
 
 import { useState } from 'react';
-import '../../css/main.css';
+import '../Inf.css';
 
 function Sip() {
 
@@ -45,9 +45,7 @@ function Sip() {
 
   return (
     <div className="container">
-    <div className="judul">
       <h1>Form Permohonan Surat Izin Penelitian</h1>
-    </div>
       <form onSubmit={handleSubmit}>
         
         {/* nama */}
@@ -112,9 +110,7 @@ function Sip() {
           onChange={(e) => handleChanges(e)} required value={values.judulpenelitian}/>
         
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit">Submit</button>
 
       </form>
     </div>

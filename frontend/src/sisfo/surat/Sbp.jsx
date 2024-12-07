@@ -2,7 +2,7 @@
 //Surat Bebas Pustaka
 
 import { useState } from 'react';
-import '../../css/main.css';
+import '../Inf.css';
 
 function Sbp() {
 
@@ -31,9 +31,7 @@ function Sbp() {
 
   return (
     <div className="container"> 
-    <div className="judul">
       <h1>Form Permohonan Surat Bebas Pustaka</h1>
-    </div>
       <form onSubmit={handleSubmit}>
 
         {/* nama */}
@@ -52,9 +50,7 @@ function Sbp() {
           onChange={(e) => handleChanges(e)} required value={values.prodi}/>
 
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit">Submit</button>
 
       </form>
     </div>

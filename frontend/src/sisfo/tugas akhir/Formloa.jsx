@@ -2,7 +2,7 @@
 //Form Bukti Submit dan LOA Publikasi Ilmiah Tugas Akhir
 
 import { useState } from 'react';
-import '../../css/main.css';
+import '../Inf.css';
 
 function Formloa() {
 
@@ -49,9 +49,7 @@ function Formloa() {
 
   return (
     <div className="container"> 
-    <div className="judul">
       <h1>Form Bukti Submit dan LOA Publikasi Ilmiah Tugas Akhir</h1>
-    </div>
       <form onSubmit={handleSubmit}>
 
         {/* email */}
@@ -119,9 +117,7 @@ function Formloa() {
         <input type='file' placeholder='pilih file' name='buktiloa' onChange={(e) => handleChanges(e)} value={values.buktiloa}/>
 
          {/* tombol */}
-         <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit">Submit</button>
 
       </form>
     </div>

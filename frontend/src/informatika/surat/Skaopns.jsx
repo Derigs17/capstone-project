@@ -2,7 +2,7 @@
 //Surat Keterangan Akti Ortu PNS
 
 import { useState } from 'react';
-import '../Inf.css';
+import '../../css/main.css';
 
 function Skaopns() {
 
@@ -51,7 +51,9 @@ function Skaopns() {
 
   return (
     <div className="container"> 
+    <div className="judul">
       <h1>Form Permohonan Surat Keterangan Aktif Ortu PNS</h1>
+    </div>
       <form onSubmit={handleSubmit}>
 
         {/* nama */}
@@ -130,7 +132,9 @@ function Skaopns() {
         <input type='file' placeholder='pilih file' name='buktiukt' onChange={(e) => handleChanges(e)} required value={values.buktiukt}/>
 
         {/* tombol */}
-        <button type="submit">Submit</button>
+        <div className="form-container">
+          <button type="submit">Submit</button>
+        </div>
 
       </form>
     </div>

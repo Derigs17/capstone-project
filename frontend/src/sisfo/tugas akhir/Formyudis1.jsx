@@ -1,9 +1,8 @@
 import React from "react";
-// import "./Sempro1.css";
-import '../../css/main.css';
+import "./Sempro1.css";
 import { useNavigate } from 'react-router-dom';
 
-function Formkolo1() {
+function Formyudis1() {
   const navigate = useNavigate()
   const instructions = [
     "GUNAKAN EMAIL AKTIF.",
@@ -14,32 +13,26 @@ function Formkolo1() {
     "CEK PRINT PREVIEW AGAR TIDAK ADA KONTEN YANG TERPOTONG.",
     "A4",
     "PASTIKAN ANDA MEMBACA DESKRIPSI PENGISIAN DAN CEK ULANG DATA YANG DIINPUT SEBELUM SUBMIT.",
-  ]; 
+  ];
 
-  const handleSubmit = (e) => {
+  const handleNext = (e) => {
     navigate('/Formkolo2');
   }
 
   return (
-    <div className="containers">
-      <div className="judul">
+    <div className="container">
       <h1>Instruksi</h1>
-      </div>
-      <form onSubmit={handleSubmit}>
       <ul>
         {instructions.map((instruction, index) => (
           <li key={index}> {instruction}</li>
         ))}
       </ul>
+ 
+      {/* tombol | ini harus diganti next button*/}
+      <button onClick={handleNext} className="next-button">Next</button>
 
-      {/* tombol */}
-      <div className="form-container">
-          <button type="submit">Next</button>
-        </div>
-
-        </form>
     </div>
   );
 }
 
-export default Formkolo1;
+export default Formyudis1;

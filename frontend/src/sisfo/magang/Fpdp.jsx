@@ -2,7 +2,7 @@
 //Form Pembagian Dosen Pembimbing
 
 import { useState } from 'react';
-import '../../css/main.css';
+import '../Inf.css';
 
 function Fpdp() {
 
@@ -52,9 +52,7 @@ function Fpdp() {
 
   return (
     <div className="container"> 
-    <div className="judul">
       <h1>Form Pembagian Dosen Pembimbing</h1>
-    </div>
       <form onSubmit={handleSubmit}>
 
         {/* nama */}
@@ -130,9 +128,7 @@ function Fpdp() {
           onChange={(e) => handleChanges(e)} required value={values.rencanamagang}/>
 
         {/* tombol */}
-        <div className="form-container">
-          <button type="submit">Submit</button>
-        </div>
+        <button type="submit">Submit</button>
 
       </form>
     </div>
