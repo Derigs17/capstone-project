@@ -161,3 +161,62 @@ db.connect((err) => {
 app.listen(8002, () =>{
     console.log("listening")
 });
+
+
+// untuk menyimpa file
+const multer = require("multer");
+const path = require("path");
+
+// Konfigurasi penyimpanan
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'JudulSkripsi'); // Folder tempat file disimpan
+    },
+    filename: function (req, file, cb) {
+        cb(null, Date.now() + path.extname(file.originalname)); // Menyimpan dengan timestamp agar nama unik
+    }
+});
+
+// Middleware upload
+const upload = multer({ storage: storage });
+
+
+// ajukan judul
+app.post('/submitProposal', upload.single('buktikrs'), (req, res) => {
+    const {
+        email,
+        fullname,
+        number,
+        judulproposal,
+        alasanproposal,
+        usulandospem,
+        estimasi
+    } = req.body;
+
+    const buktikrs = req.file ? req.file.filename : null; // Mendapatkan nama file yang disimpan
+
+    const sql = `
+        INSERT INTO proposals (email, fullname, number, judulproposal, alasanproposal, usulandospem, buktikrs, estimasi)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    `;
+    const values = [
+        email,
+        fullname,
+        number,
+        judulproposal,
+        alasanproposal,
+        usulandospem,
+        buktikrs,
+        estimasi
+    ];
+
+    db.query(sql, values, (err, data) => {
+        if (err) {
+            console.error("Error submitting proposal:", err);
+            return res.status(500).json({ error: "Internal Server Error" });
+        }
+        console.log("Proposal submitted successfully:", data);
+        return res.json({ message: "Proposal submitted successfully" });
+    });
+});
+

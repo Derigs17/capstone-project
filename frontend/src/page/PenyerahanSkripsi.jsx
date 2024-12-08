@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './PenyerahanSkripsi.css'; // Pastikan membuat file CSS ini
+
 
 const PenyerahanSkripsi = () => {
   const [step, setStep] = useState(1);

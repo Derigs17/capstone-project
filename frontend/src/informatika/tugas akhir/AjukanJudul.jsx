@@ -2,7 +2,7 @@
 //Form Ajukan Judul Skripsi
 
 import { useState } from 'react';
-import '../../css/main.css';
+import axios from 'axios';
 
 function AjukanJudul() {
 
@@ -22,25 +22,47 @@ function AjukanJudul() {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(values)
-    alert("Form berhasil disubmit!");
-    
-    setValues({
-      email: '',
-      fullname: '',
-      number: '',
-      judulproposal: '',
-      alasanproposal: '',
-      usulandospem: '',
-      buktikrs: '',
-      estimasi: ''
-    })  
-  }
+    e.preventDefault();
+
+    // Menggunakan FormData untuk file upload
+    const formData = new FormData();
+    Object.keys(values).forEach((key) => {
+        formData.append(key, values[key]);
+    });
+
+    // Menambahkan file ke FormData
+    const fileInput = document.querySelector('input[name="buktikrs"]');
+    if (fileInput.files[0]) {
+        formData.append('buktikrs', fileInput.files[0]);
+    }
+
+    axios.post('http://localhost:8002/submitProposal', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+    })
+    .then(response => {
+        console.log(response.data);
+        alert("Form berhasil disubmit!");
+        setValues({
+            email: '',
+            fullname: '',
+            number: '',
+            judulproposal: '',
+            alasanproposal: '',
+            usulandospem: '',
+            buktikrs: '',
+            estimasi: ''
+        });
+    })
+    .catch(error => {
+        console.error("Error submitting form:", error);
+        alert("Terjadi kesalahan saat mengirim form.");
+    });
+};
+
 
 
   return (
-    <div className="container"> 
+    <div className="container-form"> 
     <div className="judul">
       <h1>Form Pengajuan Judul Skripsi</h1>
     </div>
