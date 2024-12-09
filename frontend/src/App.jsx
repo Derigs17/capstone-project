@@ -27,6 +27,7 @@ import MagangKompetisi from './Informatika/Magang/MagangKompetisi';
 // magang
 import SuratPermohonanMagang from './Informatika/Magang/SuratPermohonanMagang';
 import FormPembagianDosenPembimbing from './Informatika/Magang/FormPembagianDosenPembimbing';
+import PenyerahanLaporanMagang from './Informatika/Magang/PenyerahanLaporanMagang';
 
 import TugasAkhirSI from './SistemInformasi/TugasAkhirSI';
 import PersuratanSI from './SistemInformasi/PersuratanSI';
@@ -82,6 +83,7 @@ function App() {
         {/* Persratan TI */}
         <Route path='/surat-rekomendasi' element={<SuratRekomendasi />} />
         <Route path='/surat-rekomendasi2' element={<SuratRekomendasi2 />} />
+        <Route path='/penyerahan-laporan-magang' element={<PenyerahanLaporanMagang />} />
 
 
 

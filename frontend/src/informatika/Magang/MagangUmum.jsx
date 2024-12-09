@@ -44,7 +44,7 @@ const Persuratan = () => {
                         <Dropdown.Item href="#">Surat Perpanjangan Magang</Dropdown.Item>
                         <Dropdown.Item href="#">Surat Keterangan Selesai Magang</Dropdown.Item>
                         <Dropdown.Item href="#">Lembar Penilaian Pelaporan Magang</Dropdown.Item>
-                        <Dropdown.Item href="#">Unggah Laporan Magang</Dropdown.Item>
+                        <Dropdown.Item href="/penyerahan-laporan-magang">Unggah Laporan Magang</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </div>

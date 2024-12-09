@@ -4,7 +4,7 @@
 import { useState } from 'react';
 
 
-function FormPembagianDosenPembimbing() {
+function Fpdp() {
 
   const [values, setValues] = useState({
     fullname: '',
@@ -139,4 +139,4 @@ function FormPembagianDosenPembimbing() {
   );
 }
 
-export default FormPembagianDosenPembimbing;
+export default Fpdp;
