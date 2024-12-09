@@ -26,6 +26,7 @@ import MagangKompetisi from './Informatika/Magang/MagangKompetisi';
 
 // magang
 import SuratPermohonanMagang from './Informatika/Magang/SuratPermohonanMagang';
+import FormPembagianDosenPembimbing from './Informatika/Magang/FormPembagianDosenPembimbing';
 
 import TugasAkhirSI from './SistemInformasi/TugasAkhirSI';
 import PersuratanSI from './SistemInformasi/PersuratanSI';
@@ -73,6 +74,7 @@ function App() {
 
         {/* magang */}
         <Route path='/surat-permohonan-magang' element={<SuratPermohonanMagang />} />
+        <Route path='/form-pembagian-dosen-pembimbing' element={<FormPembagianDosenPembimbing />} />  
 
         {/*  bagian Tugas Akhir TI */}
         <Route path='/ajukan-judul' element={<AjukanJudul />} />

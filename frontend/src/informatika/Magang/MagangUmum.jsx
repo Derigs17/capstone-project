@@ -37,7 +37,7 @@ const Persuratan = () => {
 
                     <Dropdown.Menu style={{ width: '60%' }}> {/* Set width to 60% */}
                         <Dropdown.Item href="/surat-permohonan-magang">Formulir Permohonan Magang</Dropdown.Item>
-                        <Dropdown.Item href="#">Formulir pembagian Dosen Pembimbing</Dropdown.Item>
+                        <Dropdown.Item href="/form-pembagian-dosen-pembimbing">Formulir pembagian Dosen Pembimbing</Dropdown.Item>
                         <Dropdown.Item href="#">Dokumen Kesepakatan Magang</Dropdown.Item>
                         <Dropdown.Item href="#">Dokumen Kecukupan Magang</Dropdown.Item>
                         <Dropdown.Item href="#">Dokumen Kelengkapan Magang</Dropdown.Item>
