@@ -220,3 +220,29 @@ app.post('/submitProposal', upload.single('buktikrs'), (req, res) => {
     });
 });
 
+// permohonan magang
+app.post('/submitMagang', (req, res) => {
+    const sql = "INSERT INTO magang (`fullname`, `contact`, `number`, `ttl`, `alamat`, `instansi`, `penerimasurat`, `alamatperusahaan`, `deskripsiperusahaan`, `jenisperusahaan`, `tanggaldiisi`) VALUES (?)";
+    const values = [
+        req.body.fullname,
+        req.body.contact,
+        req.body.number,
+        req.body.ttl,
+        req.body.alamat,
+        req.body.instansi,
+        req.body.penerimasurat,
+        req.body.alamatperusahaan,
+        req.body.deskripsiperusahaan,
+        req.body.jenisperusahaan,
+        req.body.tanggaldiisi
+    ];
+
+    db.query(sql, [values], (err, data) => {
+        if (err) {
+            console.error("Error inserting data:", err);
+            return res.status(500).json({ error: "Internal Server Error" });
+        }
+        console.log("Data inserted successfully:", data);
+        return res.json(data);
+    });
+});

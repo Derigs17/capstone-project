@@ -71,6 +71,7 @@ function SuratRekomendasi2() {
           <input type="text" placeholder ="Masukan NPM" name="number" 
           onChange={(e) => handleChanges(e)} required value={values.number}/>
 
+ 
         {/* usulan surat */}
         <label htmlFor='usulansurat'>Usulan Surat</label>
           <input type="radio" name="usulansurat" 
